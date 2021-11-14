@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>VuePractice</title>
+</head>
+
+<body>
+  <div id="list-rendering">
+    <ol>
+      <!-- Vue.jsでのループ -->
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="step6.js"></script>
+</body>
+
+</html>
