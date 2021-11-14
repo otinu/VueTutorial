@@ -6,7 +6,7 @@ const Counter = {
   },
   mounted() {
     setInterval(() => {
-      this.counter++;
+      this.counter++;   //  1秒ごとにdataのcounterがインクリメントしていく
     }, 1000);
   },
 };
