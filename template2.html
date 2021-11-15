@@ -1,0 +1,46 @@
+
+<!-- v-bindで特定のHTMLタグの属性に静的バインド -->
+<a v-bind:href="url"> ... </a>
+
+<!-- 省略記法 -->
+<a :href="url"> ... </a>
+
+<!-- v-bindで特定のHTMLタグの属性に動的バインド -->
+<a v-bind:[attributeName]="url"> ... </a>
+
+<!-- 動的引数の省略記法 -->
+<a :[attributeName]="url"> ... </a>
+
+
+
+<!-- v-onで特定のハンドラに静的バインド -->
+<a v-on:click="doSomething"> ... </a>
+
+<!-- 省略記法 -->
+<a @click="doSomething"> ... </a>
+
+<!-- v-onで特定のハンドラに動的バインド -->
+<a v-on:[eventName]="doSomething"> ... </a>
+
+<!-- 動的引数の省略記法 -->
+<a @[eventName]="doSomething"> ... </a>
+
+
+<!---------------- 動的引数の注意点 -------------------->
+
+<!-- これはコンパイラ警告を引き起こします -->
+<!-- スペースや引用符はNG -->
+<a v-bind:['foo' + bar]="value"> ... </a>
+
+<!--
+in-DOM テンプレートの中では、v-bind:[someattr] に変換されます。
+インスタンスに "someattr" プロパティがない場合、このコードは動作しません。
+-->
+<!-- 動的引数は全て小文字を使うこと -->
+<a v-bind:[someAttr]="value"> ... </a>
+
+<!------------------------------------------------------>
+
+
+<!-- イベントがトリガされた際 event.preventDefault() を呼ぶ -->
+<form v-on:submit.prevent="onSubmit">...</form>
