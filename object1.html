@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>VuePractice</title>
+</head>
+
+<body>
+  <!-- 値がtrueのところだけ、クラスに追加 -->
+  <div class="static" :class="{ active: isActive, 'text-danger': hasError }">クラス名を動的に変更</div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="object1.js"></script>
+</body>
+
+</html>
