@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>VuePractice</title>
+</head>
+
+<body>
+  <!-- v-ifとv-forの同時利用はNG
+  　　　v-ifが先に評価されてしまう -->
+  <div v-if="Math.random() > 0.5">
+    Now you see me
+  </div>
+  <div v-else>
+    Now you don't
+  </div>
+
+  <!-- v-showはelseが使えない
+      頻繁に条件分岐が起きるならv-show が推奨されている -->
+
+  <div v-show="Math.random() > 0.5">
+    Now you see me
+  </div>
+  <script src="https://unpkg.com/vue@next"></script>
+
+</body>
+
+</html>
