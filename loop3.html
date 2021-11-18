@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>VuePractice</title>
+</head>
+
+<body>
+  <ul id="v-for-object" class="demo">
+
+    <!-- ローカル変数(ブロック変数) in オブジェクト名 -->
+    <!-- オブジェクト内の要素のループも可能 -->
+    <li v-for="value in myObject">
+      {{ value }}
+    </li>
+  </ul>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="loop3.js"></script>
+</body>
+
+</html>
