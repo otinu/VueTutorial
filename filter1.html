@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>VuePractice</title>
+</head>
+
+<body>
+
+  <!-- filter()、concat()、slice() は元の配列を変更せず(非破壊的)に新しい配列を返す -->
+  <ul id="filter" class="demo">
+    <li v-for="n in evenNumbers" :key="n">{{ n }}</li>
+  </ul>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="filter1.js"></script>
+</body>
+
+</html>
