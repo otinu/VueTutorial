@@ -8,6 +8,8 @@
 
 <body>
   <ul id="array-rendering">
+
+    <!-- v-forを使う注意点として、v-ifと組み合わせて使うことを公式は非推奨としている -->
     <li v-for="item in items">
       {{ item.message }}
     </li>
