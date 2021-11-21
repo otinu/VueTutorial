@@ -1,0 +1,32 @@
+<!-- クリックイベントの伝搬が止まります -->
+<a @click.stop="doThis"></a>
+
+<!-- submit イベントによってページがリロードされません -->
+<form @submit.prevent="onSubmit"></form>
+
+<!-- 修飾子は繋げることができます -->
+<a @click.stop.prevent="doThat"></a>
+
+<!-- 値を指定せず、修飾子だけ利用することもできます -->
+<form @submit.prevent></form>
+
+<!-- イベントリスナーを追加するときにキャプチャモードで使います -->
+<!-- 言い換えれば、内部要素を対象とするイベントは、その要素によって処理される前にここで処理されます -->
+<div @click.capture="doThis">...</div>
+
+<!-- event.target が要素自身のときだけ、ハンドラが呼び出されます -->
+<!-- 言い換えると子要素のときは呼び出されません -->
+<div @click.self="doThat">...</div>
+
+<!-- 最大1回、クリックイベントはトリガされます -->
+<a @click.once="doThis"></a>
+
+<!--
+  @click.prevent.self は全てのクリックイベントが防げるのに対し、
+  @click.self.prevent は要素自身のクリックイベントを防ぐだけ
+-->
+
+<!-- `onScroll` が `event.preventDefault()` を含んでいたとしても -->
+<!-- スクロールイベントのデフォルトの挙動(つまりスクロール)は -->
+<!-- イベントの完了を待つことなくただちに発生するようになります -->
+<div @scroll.passive="onScroll">...</div>
