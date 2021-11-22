@@ -30,3 +30,48 @@
 <!-- スクロールイベントのデフォルトの挙動(つまりスクロール)は -->
 <!-- イベントの完了を待つことなくただちに発生するようになります -->
 <div @scroll.passive="onScroll">...</div>
+
+
+<!-- エンターキーのときだけ、`vm.submit()` が呼ばれます  -->
+<input @keyup.enter="submit" />
+
+<!-- キーコード
+    .enter
+    .tab
+    .delete ("Delete" と "Backspace" キー両方をキャプチャします)
+    .esc
+    .space
+    .up
+    .down
+    .left
+    .right  -->
+
+
+<!-- Alt + Enter -->
+<input @keyup.alt.enter="clear" />
+
+<!-- Ctrl + Click -->
+<div @click.ctrl="doSomething">Do something</div>
+
+<!-- システム修飾子キー　
+      .ctrl
+      .alt
+      .shift
+      .meta -->   <!-- metaはコマンドキー(Windowsキー) -->
+
+<!-- exact修飾子 -->
+
+<!-- これは Ctrl に加えて Alt や Shift キーが押されていても発行されます -->
+<button @click.ctrl="onClick">A</button>
+
+<!-- これは Ctrl キーが押され、他のキーが押されてないときだけ発行されます -->
+<button @click.ctrl.exact="onCtrlClick">A</button>
+
+<!-- これは システム修飾子が押されてないときだけ発行されます -->
+<button @click.exact="onClick">A</button>
+
+
+<!-- マウスボタンの修飾子
+  .left
+  .right
+  .middle -->
