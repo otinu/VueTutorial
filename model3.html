@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>VuePractice</title>
+</head>
+
+<body>
+
+  <!-- チェックボックスを使用 -->
+  <div id="v-model-multiple-checkboxes" class="demo">
+    <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
+    <label for="jack">Jack</label>
+    <input type="checkbox" id="john" value="John" v-model="checkedNames" />
+    <label for="john">John</label>
+    <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
+    <label for="mike">Mike</label>
+    <br />
+    <span>Checked names: {{ checkedNames }}</span>
+  </div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="model1.js"></script>
+</body>
+
+</html>
