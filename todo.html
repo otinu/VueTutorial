@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
   <title>Vue.js 3</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
   <div id="app">
     <h2>TODO List</h2>
@@ -16,6 +18,7 @@
     </form>
     <ul>
       <li v-for="todo in todos">
+        <input type="checkbox" v-model="todo.isDone">
         <span>{{ todo.item }}</span>
       </li>
     </ul>
@@ -24,4 +27,5 @@
   <script src="https://unpkg.com/vue@3.1.5"></script>
   <script src="todo.js"></script>
 </body>
+
 </html>
