@@ -13,8 +13,8 @@ const app = Vue.createApp({
       }
       this.todos.push(todo)
     },
-    deleteItem: function(event) {
-      console.log('Delete!')
+    deleteItem: function(index) {
+      this.todos.splice(index, 1)
     }
   }
 })
