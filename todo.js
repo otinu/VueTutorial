@@ -12,6 +12,9 @@ const app = Vue.createApp({
         isDone: false
       }
       this.todos.push(todo)
+    },
+    deleteItem: function(event) {
+      console.log('Delete!')
     }
   }
 })
